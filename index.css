@@ -1,66 +1,102 @@
+/* Reset some base styles */
 body {
-    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: #e8f5e9; /* Light green background for the page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eaeaea;
     color: #333;
   }
   
   .brochure {
-    max-width: 800px;
-    margin: auto;
-    background: linear-gradient(145deg, #66bb6a, #388e3c); /* Green gradient for 3D effect */
-    border-radius: 10px;
-    padding: 40px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1), -10px -10px 20px rgba(255, 255, 255, 0.3); /* Shadow effect for 3D */
-    color: white;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .brochure:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
   }
   
   header {
     text-align: center;
-    background-color: #388e3c; /* Darker green for header */
+    background: linear-gradient(to right, #005bea, #00c6fb);
     color: white;
-    padding: 20px 0;
-    border-radius: 5px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
   
-  h1 {
+  header h1 {
     margin: 0;
     font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
   }
   
-  h2 {
-    margin-top: 5px;
+  header h2 {
+    margin: 5px 0 0;
+    font-size: 1.2em;
     font-weight: normal;
   }
   
   section {
-    margin-top: 30px;
+    margin: 25px 0;
+    background: #f9f9f9;
+    padding: 20px;
+    border-left: 6px solid #005bea;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  section:hover {
+    transform: translateY(-4px);
   }
   
   h3 {
-    color: #f1f1f1; /* Light text color for headings */
-    border-bottom: 2px solid #004080;
-    padding-bottom: 5px;
+    margin-top: 0;
+    color: #005bea;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   
   ul {
-    list-style: disc inside;
-    margin: 10px 0 0 20px;
+    padding-left: 20px;
   }
   
-  footer {
-    margin-top: 40px;
-    text-align: center;
-    font-style: italic;
-    color: #f1f1f1;
+  ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  ul li::before {
+    content: "✔";
+    color: #00c6fb;
+    position: absolute;
+    left: 0;
   }
   
   a {
-    color: #f1f1f1; /* Light color for links */
+    color: #005bea;
     text-decoration: none;
   }
   
   a:hover {
     text-decoration: underline;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    background: #005bea;
+    color: white;
+    border-radius: 8px;
+    font-style: italic;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   }
   
